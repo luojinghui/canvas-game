@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 20px;
+}
+.step {
+    margin-bottom: 20px;
+}
+.step p {
+    width: 60px;
+}
+.label {
+    margin-right: 20px;
+}
+.label input {
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #ddd;
+    text-align: center;
+
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.label input:focus {
+    border: 1px solid #7acfe2;
+}
+
+.upload {
+    position: relative;
+    cursor: pointer;
+}
+.upload .upload-btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #7acfe2;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+
+    z-index: 1;
+}
+.upload input {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 200px;
+    height: 40px;
+
+    opacity: 0;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.desc {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #999;
+}
+
+#play {
+    color: #fff;
+    font-size: 16px;
+
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #c5aa25;
+    outline: none;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.left-box {
+    width: 300px;
+}
+
+
+#canvas {
+    display: none;
+}
+
+#game {
+    margin: 0 auto;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 600px;
+    height: 600px;
+    background-color: #eee;
+}
+
+#game img {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+#game > div {
+    width: 200px;
+    height: 150px;
+}
+
+/*提示*/
+.model {
+    position: fixed;
+    top: 0;
+    opacity: .8;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #3C3C3C;
+    text-align: center;
+    z-index: 999;
+    color: white;
+}
+
+.model > div {
+    font-size: 20px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.hide {
+    display: none;
+}
+
+
+.flex {
+    display: flex;
+}
+.a-c-c {
+    align-items: center;
+}
+.j-c-c {
+    justify-content: center;
+}
+.flex1 {
+    flex: 1;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.center {
+    text-align: center;
+}
+input::-webkit-input-placeholder {
+    color: #999;
+}
+input:-moz-placeholder {
+    color: #999;
+}
+input::-moz-placeholder {
+    color: #999;
+}
+input::-ms-input-placeholder {
+    color: #999;
+}
