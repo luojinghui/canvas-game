@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="./main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
 <body>
 <div>
@@ -23,6 +23,7 @@
 <div class="container">
     <h2 class="center mb10">拼图游戏</h2>
     <p class="desc center">游戏玩法:拖动图片到另一位置,即可交换图片,所有图片拼好即成功</p>
+    <p class="desc center">游戏建议:建议上传图片尺寸大于600*600像素图片</p>
     <div class="flex a-c-c media">
         <div class="left-box">
             <div class="flex a-c-c step">
@@ -40,7 +41,7 @@
                 <p class="mr10">步骤二:</p>
                 <div class="upload flex1">
                     <div class="upload-btn flex a-c-c j-c-c">上传图片</div>
-                    <input type="file" id="imgPath" onchange="preview(this)"/>
+                    <input type="file" id="inputImg"/>
                 </div>
             </div>
             <div class="flex a-c-c step">
@@ -49,6 +50,10 @@
                     <div id="play" class="flex a-c-c j-c-c">Play Game</div>
                 </div>
             </div>
+            <div class="flex a-c-c step">
+                <p class="mr10">难度：</p>
+                <span id="rotate"></span>
+            </div>
         </div>
 
         <div class="right-box">
@@ -56,6 +61,7 @@
         </div>
     </div>
 </div>
+
 <canvas id="canvas">cannot support canvas</canvas>
 
 <div class="model hide" id="model">
@@ -63,30 +69,6 @@
         <p>恭喜你,挑战成功！</p>
     </div>
 </div>
-
-<script src="./index.js"></script>
-<script>
-    function preview(file) {
-        if (file.files && file.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (evt) {
-                document.getElementById('game').innerHTML = "";
-                var gridRow = document.getElementById("m").value || 3;
-                var gridCol = document.getElementById("n").value || 3;
-
-                if (parseInt(gridRow) <= 1 || parseInt(gridCol) <= 1) {
-                    alert("太菜了,拒绝给你玩耍");
-
-                    return;
-                }
-
-                puzzle.init(evt.target.result, gridRow, gridCol);
-            };
-            reader.readAsDataURL(file.files[0]);
-        }
-    }
-
-    puzzle.init("./test.jpg", 3, 3);
-</script>
+<script src="./dist/bundle.js"></script>
 </body>
 </html>

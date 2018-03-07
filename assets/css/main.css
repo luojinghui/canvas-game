@@ -2,18 +2,23 @@
     margin: 0;
     padding: 0;
 }
-.container {
+
+.left-box {
     padding: 20px;
 }
+
 .step {
     margin-bottom: 20px;
 }
+
 .step p {
     width: 60px;
 }
+
 .label {
     margin-right: 20px;
 }
+
 .label input {
     width: 150px;
     height: 30px;
@@ -25,6 +30,7 @@
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
 .label input:focus {
     border: 1px solid #7acfe2;
 }
@@ -33,6 +39,7 @@
     position: relative;
     cursor: pointer;
 }
+
 .upload .upload-btn {
     width: 150px;
     height: 40px;
@@ -44,6 +51,7 @@
 
     z-index: 1;
 }
+
 .upload input {
     position: absolute;
     left: 0;
@@ -84,7 +92,6 @@
     width: 300px;
 }
 
-
 #canvas {
     display: none;
 }
@@ -93,12 +100,16 @@
     margin: 0 auto;
     overflow: hidden;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
-    width: 600px;
-    height: 600px;
-    background-color: #eee;
+    max-width: 600px;
+    max-height: 600px;
 }
 
 #game img {
@@ -139,43 +150,74 @@
     display: none;
 }
 
+@media (max-width: 940px) {
+    .media {
+        display: block !important;
+    }
+
+    #game {
+        max-width: 940px;
+        max-height: 940px;
+    }
+}
 
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
+
 .a-c-c {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
+
 .j-c-c {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
+
 .flex1 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
+
 .flex-wrap {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+
 .mr10 {
     margin-right: 10px;
 }
+
 .mb10 {
     margin-bottom: 10px;
 }
+
 .mb20 {
     margin-bottom: 20px;
 }
+
 .center {
     text-align: center;
 }
+
 input::-webkit-input-placeholder {
     color: #999;
 }
+
 input:-moz-placeholder {
     color: #999;
 }
+
 input::-moz-placeholder {
     color: #999;
 }
-input::-ms-input-placeholder {
+
+input:-ms-input-placeholder {
     color: #999;
 }
