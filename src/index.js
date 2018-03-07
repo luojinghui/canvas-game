@@ -98,8 +98,8 @@
 
     //开始游戏
     onPlay() {
-      let col = this.eleCol.value || 3;
       let row = this.eleRow.value || 3;
+      let col = this.eleCol.value || 3;
       let {clientWidth, isPhone, data} = this.state;
       let index = 0;
       let realWidth = !isPhone ? Math.floor((600 / col)) : Math.floor((clientWidth - 30) / col);
